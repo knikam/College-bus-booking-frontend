@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="col-lg-6 px-lg-5 my-5 py-3">
+    <div class="card my-5">
+      <div class="card-body p-lg-5 ">
+        <h3 class="mb-4">Add bus and route for users</h3>
+        <form [formGroup]="routeForm">
+
+          <div class="form-floating mb-3">
+            <input class="form-control" id="name" type="text" formControlName="driverName" required>
+            <label for="username">Driver Name</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" id="floatingInput" type="text" formControlName="source" required>
+            <label for="floatingInput">Source Station</label>
+          </div>
+
+          <div class="form-floating mb-3">
+              <input class="form-control"  type="text" formControlName="destination"  required>
+              <label for="floatingInput">Destination Station</label>
+            </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" id="floatingDOB" type="number" formControlName="price"  required>
+            <label for="floatingPassword">Price</label>
+          </div>
+
+          <div class="form-floating input-group mb-3">
+            <input class="form-control p-2" id="floatingDOB" type="text" formControlName="stops" required>
+            <div class="input-group-append">
+                <button class="btn btn-primary block p-3" id="regidter" type="button" name="registerSubmit" (click)="addStop()">Add stop</button>
+            </div>
+            <label for="floatingPassword">Stops</label>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary block" id="regidter" type="button" name="registerSubmit" (click)="addRoute()">Register</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
